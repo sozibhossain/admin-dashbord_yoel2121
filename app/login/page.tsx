@@ -22,8 +22,8 @@ export default function LoginPage() {
 function LoginContent() {
   const router = useRouter();
   const params = useSearchParams();
-  const [email, setEmail] = useState("admin@gmail.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(event: FormEvent) {

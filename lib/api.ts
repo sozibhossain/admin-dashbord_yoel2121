@@ -88,13 +88,15 @@ const baseURL =
   process.env.NEXTPUBLICBASEURL ||
   "http://localhost:5006/api/v1";
 
+const browserBaseURL = "/api/backend";
+
 export const api = axios.create({
-  baseURL,
+  baseURL: typeof window === "undefined" ? baseURL : browserBaseURL,
   withCredentials: true,
 });
 
 export const publicApi = axios.create({
-  baseURL,
+  baseURL: typeof window === "undefined" ? baseURL : browserBaseURL,
   withCredentials: true,
 });
 
