@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Zentrofix Admin",
   description: "Zentrofix admin dashboard",
+  icons: {
+    icon: [{ url: "/fav-icon.png", type: "image/png" }],
+    shortcut: "/fav-icon.png",
+    apple: "/fav-icon.png",
+  },
 };
 
 export default function RootLayout({
